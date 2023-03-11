@@ -1,6 +1,7 @@
 body {
   background-color: #f5f5eb;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-y: scroll;
 }
 
 .container {
@@ -23,11 +24,11 @@ body {
 }
 
 .label {
-  padding: 1em 0;
+  padding-top: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 150%;
   cursor: pointer;
   color: #0059d9;
 }
@@ -36,6 +37,7 @@ body {
   width: 1em;
   height: 1em;
   opacity: 0;
+  transform: rotate(0deg);
   transition: 0.3s;
 }
 
@@ -61,26 +63,25 @@ body {
 
 .section:hover .icon {
   transition: 1s;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 
-.icon::before {
+/* .icon::before {
   transition: 1s;
-}
+} */
 
-.section:hover .meme {
+.section:hover .meme,
+.input:checked ~ .label > .meme {
   width: 50%;
   margin: 5% auto;
   opacity: 1;
 }
 
-.input:checked + .icon {
-  transform: rotate(-45deg);
+.input:checked + .label > .icon {
+  transform: rotate(45deg);
   opacity: 1;
 }
 
-.input:checked ~ .meme {
-  width: 50%;
-  margin: 5% auto;
-  opacity: 1;
+.input:checked + .label {
+  color: #000000;
 }
