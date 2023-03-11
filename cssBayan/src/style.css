@@ -19,35 +19,41 @@ body {
   font-weight: 700;
 }
 
-.section-header {
+.input {
+  display: none;
+}
+
+.label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.h2 {
-  font-size: 2.3em;
+  font-size: 1.5em;
   color: #0059d9;
 }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  opacity: 0;
+}
+
+
 
 .container:hover {
   cursor: pointer;
 }
 
-.h2-hover {
+.container:hover .label {
   color: #000000;
 }
 
-.icon-hover {
-  width: 3em;
-  height: 3em;
-  background-image: url("../images/plus-icon.svg");
-  background-size: cover;
+.container:hover .icon {
+  opacity: 1;
 }
 
-.icon-active {
-  width: 3em;
-  height: 3em;
-  background-image: url("../images/xmark-solid.svg");
-  background-size: cover;
+.icon:before {
+  transform: rotate(45deg);
+}
+.icon:after {
+  transform: rotate(-45deg);
 }
