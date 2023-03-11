@@ -61,24 +61,16 @@ body {
   opacity: 1;
 }
 
-.section:hover .icon {
+.section:hover .icon,
+.input:checked + .label > .icon {
   transition: 1s;
   transform: rotate(45deg);
 }
-
-/* .icon::before {
-  transition: 1s;
-} */
 
 .section:hover .meme,
 .input:checked ~ .label > .meme {
   width: 50%;
   margin: 5% auto;
-  opacity: 1;
-}
-
-.input:checked + .label > .icon {
-  transform: rotate(45deg);
   opacity: 1;
 }
 
