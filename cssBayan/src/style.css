@@ -35,9 +35,16 @@ body {
   width: 1em;
   height: 1em;
   opacity: 0;
+  transition: 0.3s;
 }
 
-
+.meme {
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  transition: 1s;
+}
 
 .container:hover {
   cursor: pointer;
@@ -51,9 +58,26 @@ body {
   opacity: 1;
 }
 
-.icon:before {
-  transform: rotate(45deg);
-}
-.icon:after {
+.section:hover .icon {
+  transition: 1s;
   transform: rotate(-45deg);
+}
+
+.icon::before {
+  transition: 1s;
+}
+
+.section:hover .meme {
+  width: 50%;
+  opacity: 1;
+}
+
+.input:checked ~ .icon {
+  transform: rotate(-45deg);
+  opacity: 1;
+}
+
+.input:checked ~ .meme {
+  width: 50%;
+  opacity: 1;
 }
