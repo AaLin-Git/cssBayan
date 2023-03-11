@@ -14,9 +14,15 @@ body {
 }
 
 .section {
-  padding: 1em;
+  padding: 1em 0;
   border-top: 1px solid #000000;
   font-weight: 700;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .h2 {
@@ -28,6 +34,20 @@ body {
   cursor: pointer;
 }
 
-.container:hover .h2 {
+.h2-hover {
   color: #000000;
+}
+
+.icon-hover {
+  width: 3em;
+  height: 3em;
+  background-image: url("../images/plus-icon.svg");
+  background-size: cover;
+}
+
+.icon-active {
+  width: 3em;
+  height: 3em;
+  background-image: url("../images/xmark-solid.svg");
+  background-size: cover;
 }
