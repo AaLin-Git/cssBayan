@@ -99,25 +99,26 @@ body {
 }
 
 @media (min-width: 820px) {
+  .container {
+    margin: 2% auto;
+  }
+
   .h1 {
-    font-size: 2.4em;
+    font-size: 2em;
   }
 
   .label {
-    font-size: 1.3em;
+    font-size: 1em;
   }
 
   .section:hover .meme,
   .input:checked ~ .label > .meme {
     width: 50%;
+    margin: 2% auto;
   }
 }
 
 @media (min-width: 1920px) {
-  .container {
-    margin: 2% auto;
-  }
-
   .h1 {
     font-size: 2.2em;
   }
@@ -129,6 +130,5 @@ body {
   .section:hover .meme,
   .input:checked ~ .label > .meme {
     width: 35%;
-    margin: 2% auto;
   }
 }
