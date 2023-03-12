@@ -10,12 +10,12 @@ body {
 }
 
 .h1 {
-  font-size: 4em;
+  font-size: 1.4em;
   font-weight: 700;
 }
 
 .section {
-  border-top: 1px solid #000000;
+  border-top: 0.02em solid #000000;
   font-weight: 700;
 }
 
@@ -28,8 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 150%;
-  cursor: pointer;
+  font-size: 1em;
   color: #0059d9;
 }
 
@@ -49,10 +48,6 @@ body {
   transition: 1s;
 }
 
-.container:hover {
-  cursor: pointer;
-}
-
 .container:hover .label {
   color: #000000;
 }
@@ -63,17 +58,77 @@ body {
 
 .section:hover .icon,
 .input:checked + .label > .icon {
-  transition: 1s;
+  transition: 0.3s;
   transform: rotate(45deg);
 }
 
 .section:hover .meme,
 .input:checked ~ .label > .meme {
-  width: 50%;
+  width: 60%;
   margin: 5% auto;
   opacity: 1;
 }
 
 .input:checked + .label {
   color: #000000;
+}
+
+@media (hover: hover) {
+  .container:hover {
+    cursor: pointer;
+  }
+
+  .label {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 320px) {
+  .h1 {
+    font-size: 1.4em;
+  }
+
+  .label {
+    font-size: 0.8em;
+  }
+
+  .section:hover .meme,
+  .input:checked ~ .label > .meme {
+    width: 80%;
+  }
+}
+
+@media (min-width: 820px) {
+  .h1 {
+    font-size: 2.4em;
+  }
+
+  .label {
+    font-size: 1.3em;
+  }
+
+  .section:hover .meme,
+  .input:checked ~ .label > .meme {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    margin: 2% auto;
+  }
+
+  .h1 {
+    font-size: 2.2em;
+  }
+
+  .label {
+    font-size: 1em;
+  }
+
+  .section:hover .meme,
+  .input:checked ~ .label > .meme {
+    width: 35%;
+    margin: 2% auto;
+  }
 }
