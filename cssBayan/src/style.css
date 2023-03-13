@@ -69,6 +69,15 @@ body {
   opacity: 1;
 }
 
+.section:active .label {
+  color: #0059d9;
+}
+
+.section:active .meme {
+  opacity: 0.4;
+  transition: 1s;
+}
+
 .input:checked + .label {
   color: #000000;
 }
