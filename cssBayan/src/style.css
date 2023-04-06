@@ -75,7 +75,7 @@ body {
 
 .section:active .meme {
   opacity: 0.4;
-  transition: 1s;
+  transition: 0.7s;
 }
 
 .input:checked + .label {
@@ -133,7 +133,7 @@ body {
   }
 
   .label {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .section:hover .meme,
